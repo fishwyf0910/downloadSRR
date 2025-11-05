@@ -1,4 +1,4 @@
-#不能提交pbs作业，在登陆界面跑
+#提交pbs作业报错，可在登陆节点跑
 
 cd /data01/wangyf/project2
 
