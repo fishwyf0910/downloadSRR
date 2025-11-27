@@ -12,3 +12,11 @@ gzip SRR8380186_1.fastq && gzip SRR8380186_2.fastq
 # 如果没有拆成两个文件，可尝试以下方法
 fasterq-dump --threads $cpu --split-spot $filename -O $filename
 seqkit split -p 2 --out-file $i/split --threads 30 $i/$i.fastq
+
+
+'''
+--split-spot: 将双端测序分为两份,但是都放在同一个文件中
+--split-files: 将双端测序分为两份,放在不同的文件,但是对于一方有而一方没有的reads直接丢弃
+--split-3 : 将双端测序分为两份,放在不同的文件,但是对于一方有而一方没有的reads会单独放在一个文件夹里
+
+'''
